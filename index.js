@@ -30,4 +30,4 @@ async function fetchINDEXUrl() {
   }
 }
 
-fetchINDEXUrl();
+fetchINDEXUrl();catch(err => console.error('Error:', err.message));
