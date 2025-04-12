@@ -69,10 +69,10 @@ cmd({
     ...media,
     caption: "Unlocked View Once"
   }, { quoted: msg });
-});// =======================
-// SIMPLE ANTILINK COMMAND
-// =======================
+}); 
 
+ //=========== ANTILINK COMMAND ===========
+cmd({
 bot.ev.on("messages.upsert", async (m) => {
   try {
     const msg = m.messages[0];
