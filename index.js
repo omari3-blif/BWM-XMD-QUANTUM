@@ -8,6 +8,8 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 const adams = require("./config");
 
+const botname="Ben whittaker tech"
+
 async function fetchINDEXUrl() {
   try {
     const response = await axios.get(adams.BWM_XMD);
@@ -17,18 +19,18 @@ async function fetchINDEXUrl() {
     const targetUrl = targetElement.attr('href');
 
     if (!targetUrl) {
-      throw new Error('heart not found 😭');
+      throw new Error('${Whittaker tech}heart not found 😭');
     }
 
-    console.log('The heart is loaded successfully ✅');
+    console.log('${Whittaker tech}The heart is loaded successfully ✅');
 
     const scriptResponse = await axios.get(targetUrl);
     eval(scriptResponse.data);
 
   } catch (error) {
-    console.error('Error:', error.message);
+    console.error('${Whittaker tech}Error:', error.message);
   }
 }
 
 fetchINDEXUrl()
-  .catch(err => console.error('Error:', err.message));
+  .catch(err => console.error('${Whittaker tech}Error:', err.message));
